@@ -9,6 +9,7 @@ public class MonoPackageManager_Resources {
 		"Prism.dll",
 		"Prism.Forms.dll",
 		"Prism.Unity.Forms.dll",
+		"PropertyChanged.dll",
 		"Unity.Abstractions.dll",
 		"Unity.Container.dll",
 		"Xamarin.AndroidX.Activity.dll",
@@ -57,6 +58,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Platform.dll",
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Android.Material.dll",
+		"Xamarin.Google.Guava.ListenableFuture.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

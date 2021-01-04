@@ -10,3 +10,4 @@ D:\practice\xamarin\HelloCamera\HelloCamera\HelloCamera\obj\Debug\netstandard2.0
 D:\practice\xamarin\HelloCamera\HelloCamera\HelloCamera\obj\Debug\netstandard2.0\XamlC.stamp
 D:\practice\xamarin\HelloCamera\HelloCamera\HelloCamera\obj\Debug\netstandard2.0\HelloCamera.dll
 D:\practice\xamarin\HelloCamera\HelloCamera\HelloCamera\obj\Debug\netstandard2.0\HelloCamera.pdb
+D:\practice\xamarin\HelloCamera\HelloCamera\HelloCamera\obj\Debug\netstandard2.0\HelloCamera.csproj.Fody.CopyLocal.cache

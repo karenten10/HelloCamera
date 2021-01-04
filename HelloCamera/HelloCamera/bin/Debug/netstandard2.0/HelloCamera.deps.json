@@ -11,6 +11,8 @@
         "dependencies": {
           "NETStandard.Library": "2.0.3",
           "Prism.Unity.Forms": "8.0.0.1909",
+          "PropertyChanged.Fody": "3.3.1",
+          "Xamarin.Essentials": "1.6.0",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1364"
         },
@@ -18,6 +20,7 @@
           "HelloCamera.dll": {}
         }
       },
+      "Fody/6.3.0": {},
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
@@ -53,6 +56,17 @@
           "lib/netstandard2.0/Prism.Unity.Forms.dll": {
             "assemblyVersion": "8.0.0.1909",
             "fileVersion": "8.0.0.1909"
+          }
+        }
+      },
+      "PropertyChanged.Fody/3.3.1": {
+        "dependencies": {
+          "Fody": "6.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PropertyChanged.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
           }
         }
       },
@@ -106,7 +120,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.5.3.2": {
+      "Xamarin.Essentials/1.6.0": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -119,7 +133,7 @@
       },
       "Xamarin.Essentials.Interfaces/1.5.3.2": {
         "dependencies": {
-          "Xamarin.Essentials": "1.5.3.2"
+          "Xamarin.Essentials": "1.6.0"
         },
         "runtime": {
           "lib/netstandard2.0/Essential.Interfaces.dll": {
@@ -151,6 +165,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Fody/6.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kBGlW/vBUvBSyCvFI3YICNl77gjUr0KMROlBTeBPN/+J3JMU57w1dpXPwjmU4ahdBTYLomzgxKLaJ3jVNuXuQg==",
+      "path": "fody/6.3.0",
+      "hashPath": "fody.6.3.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -187,6 +208,13 @@
       "path": "prism.unity.forms/8.0.0.1909",
       "hashPath": "prism.unity.forms.8.0.0.1909.nupkg.sha512"
     },
+    "PropertyChanged.Fody/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/K/X8wn2IZV7Zezb+WvieOalWopFJKEcB7BrPoDFCj74VexupWdtvqriCoifSyrX0E+XhTzk0cVQd26hQ7TODg==",
+      "path": "propertychanged.fody/3.3.1",
+      "hashPath": "propertychanged.fody.3.3.1.nupkg.sha512"
+    },
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -222,12 +250,12 @@
       "path": "unity.container/5.11.8",
       "hashPath": "unity.container.5.11.8.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.5.3.2": {
+    "Xamarin.Essentials/1.6.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BSLgDJUOPFRwTpQaftM+s4qb/MsTjrqXulEYDOcK6KF3i0Orf75zo3RwRfqnQ8WfpoEFxW/v0jgcPWCvOMgHxg==",
-      "path": "xamarin.essentials/1.5.3.2",
-      "hashPath": "xamarin.essentials.1.5.3.2.nupkg.sha512"
+      "sha512": "sha512-geJYnjTyPv2npClIkBxLXk9cOV9CPwj/oayA8I4+6NpZc/dIiYxax36m25SW8TrCMR/rvyY44fZBjWBvj7BCQQ==",
+      "path": "xamarin.essentials/1.6.0",
+      "hashPath": "xamarin.essentials.1.6.0.nupkg.sha512"
     },
     "Xamarin.Essentials.Interfaces/1.5.3.2": {
       "type": "package",

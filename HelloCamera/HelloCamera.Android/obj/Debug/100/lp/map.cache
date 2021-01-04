@@ -43,6 +43,7 @@ Xamarin.Essentials
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Google.Android.Material
+Xamarin.Google.Guava.ListenableFuture
 androidx.versionedparcelable.versionedparcelable
 androidx.lifecycle.lifecycle-runtime
 androidx.core.core

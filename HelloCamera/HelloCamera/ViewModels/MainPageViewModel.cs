@@ -9,9 +9,12 @@ using System.Text;
 namespace HelloCamera.ViewModels
 {
     using System.ComponentModel;
+    using System.IO;
+    using System.Threading.Tasks;
     using Prism.Events;
     using Prism.Navigation;
     using Prism.Services;
+    using Xamarin.Essentials;
     using Xamarin.Forms;
 
     public class MainPageViewModel : INotifyPropertyChanged, INavigationAware
@@ -22,6 +25,8 @@ namespace HelloCamera.ViewModels
 
         public ImageSource MyImageSource { get; set; }
 
+        public string PhotoPath { get; set; }
+
         public DelegateCommand TakeCommand { get; set; }
 
         public MainPageViewModel(INavigationService navigationService)
@@ -30,7 +35,9 @@ namespace HelloCamera.ViewModels
 
             TakeCommand = new DelegateCommand(async () =>
             {
-               
+                await TakePhotoAsync();
+
+                MyImageSource = ImageSource.FromFile(PhotoPath);
             });
 
         }
@@ -47,5 +54,35 @@ namespace HelloCamera.ViewModels
         {
         }
 
+        async Task TakePhotoAsync()
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync();
+                await LoadPhotoAsync(photo);
+                Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
+            }
+        }
+
+        async Task LoadPhotoAsync(FileResult photo)
+        {
+            // canceled
+            if (photo == null)
+            {
+                PhotoPath = null;
+                return;
+            }
+            // save the file into local storage
+            var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            using (var stream = await photo.OpenReadAsync())
+            using (var newStream = File.OpenWrite(newFile))
+                await stream.CopyToAsync(newStream);
+
+            PhotoPath = newFile;
+        }
     }
 }

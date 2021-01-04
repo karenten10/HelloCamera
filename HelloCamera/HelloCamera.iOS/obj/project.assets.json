@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Fody/6.3.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -35,6 +41,30 @@
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Unity.Forms.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/3.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
@@ -80,8 +110,11 @@
           "lib/netstandard2.0/Unity.Container.dll": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.2": {
+      "Xamarin.Essentials/1.6.0": {
         "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
         "frameworkAssemblies": [
           "OpenTK-1.0",
           "System.Drawing.Common.dll"
@@ -231,6 +264,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.Unity.Forms": "8.0.0.1909",
+          "PropertyChanged.Fody": "3.3.1",
+          "Xamarin.Essentials": "1.6.0",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1364"
         },
@@ -243,6 +278,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Fody/6.3.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -276,6 +317,30 @@
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Unity.Forms.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/3.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
@@ -321,8 +386,11 @@
           "lib/netstandard2.0/Unity.Container.dll": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.2": {
+      "Xamarin.Essentials/1.6.0": {
         "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
         "frameworkAssemblies": [
           "OpenTK-1.0",
           "System.Drawing.Common.dll"
@@ -472,6 +540,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.Unity.Forms": "8.0.0.1909",
+          "PropertyChanged.Fody": "3.3.1",
+          "Xamarin.Essentials": "1.6.0",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1364"
         },
@@ -484,6 +554,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Fody/6.3.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -517,6 +593,30 @@
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Unity.Forms.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/3.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
@@ -562,8 +662,11 @@
           "lib/netstandard2.0/Unity.Container.dll": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.2": {
+      "Xamarin.Essentials/1.6.0": {
         "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
         "frameworkAssemblies": [
           "OpenTK-1.0",
           "System.Drawing.Common.dll"
@@ -713,6 +816,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.Unity.Forms": "8.0.0.1909",
+          "PropertyChanged.Fody": "3.3.1",
+          "Xamarin.Essentials": "1.6.0",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1364"
         },
@@ -725,6 +830,12 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Fody/6.3.0": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Prism.Core/8.0.0.1909": {
         "type": "package",
         "compile": {
@@ -758,6 +869,30 @@
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Unity.Forms.dll": {}
+        }
+      },
+      "PropertyChanged.Fody/3.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PropertyChanged.dll": {}
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/xamarinios10/_._": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/_._": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {
@@ -803,8 +938,11 @@
           "lib/netstandard2.0/Unity.Container.dll": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.2": {
+      "Xamarin.Essentials/1.6.0": {
         "type": "package",
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
         "frameworkAssemblies": [
           "OpenTK-1.0",
           "System.Drawing.Common.dll"
@@ -954,6 +1092,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Prism.Unity.Forms": "8.0.0.1909",
+          "PropertyChanged.Fody": "3.3.1",
+          "Xamarin.Essentials": "1.6.0",
           "Xamarin.Essentials.Interfaces": "1.5.3.2",
           "Xamarin.Forms": "4.8.0.1364"
         },
@@ -967,6 +1107,39 @@
     }
   },
   "libraries": {
+    "Fody/6.3.0": {
+      "sha512": "kBGlW/vBUvBSyCvFI3YICNl77gjUr0KMROlBTeBPN/+J3JMU57w1dpXPwjmU4ahdBTYLomzgxKLaJ3jVNuXuQg==",
+      "type": "package",
+      "path": "fody/6.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.3.0.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
+      ]
+    },
     "Prism.Core/8.0.0.1909": {
       "sha512": "Ri+iSFvJiSKYdui7qtxi3uH9NImSZ8Jl/nOosxScSJseFwAc8Lz63JLXoqSAQglcX13DzZcAMzpKNuA9rCFiJg==",
       "type": "package",
@@ -1019,6 +1192,73 @@
         "prism-logo.png",
         "prism.unity.forms.8.0.0.1909.nupkg.sha512",
         "prism.unity.forms.nuspec"
+      ]
+    },
+    "PropertyChanged.Fody/3.3.1": {
+      "sha512": "/K/X8wn2IZV7Zezb+WvieOalWopFJKEcB7BrPoDFCj74VexupWdtvqriCoifSyrX0E+XhTzk0cVQd26hQ7TODg==",
+      "type": "package",
+      "path": "propertychanged.fody/3.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/PropertyChanged.Fody.props",
+        "lib/net40/PropertyChanged.dll",
+        "lib/net40/PropertyChanged.xml",
+        "lib/netstandard1.0/PropertyChanged.dll",
+        "lib/netstandard1.0/PropertyChanged.xml",
+        "lib/netstandard2.0/PropertyChanged.dll",
+        "lib/netstandard2.0/PropertyChanged.xml",
+        "propertychanged.fody.3.3.1.nupkg.sha512",
+        "propertychanged.fody.nuspec",
+        "weaver/PropertyChanged.Fody.dll",
+        "weaver/PropertyChanged.Fody.xcf"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
@@ -1143,10 +1383,10 @@
         "unity.container.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.5.3.2": {
-      "sha512": "BSLgDJUOPFRwTpQaftM+s4qb/MsTjrqXulEYDOcK6KF3i0Orf75zo3RwRfqnQ8WfpoEFxW/v0jgcPWCvOMgHxg==",
+    "Xamarin.Essentials/1.6.0": {
+      "sha512": "geJYnjTyPv2npClIkBxLXk9cOV9CPwj/oayA8I4+6NpZc/dIiYxax36m25SW8TrCMR/rvyY44fZBjWBvj7BCQQ==",
       "type": "package",
-      "path": "xamarin.essentials/1.5.3.2",
+      "path": "xamarin.essentials/1.6.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1180,6 +1420,9 @@
         "lib/xamarinios10/Xamarin.Essentials.dll",
         "lib/xamarinios10/Xamarin.Essentials.pdb",
         "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarinmac20/Xamarin.Essentials.dll",
+        "lib/xamarinmac20/Xamarin.Essentials.pdb",
+        "lib/xamarinmac20/Xamarin.Essentials.xml",
         "lib/xamarintvos10/Xamarin.Essentials.dll",
         "lib/xamarintvos10/Xamarin.Essentials.pdb",
         "lib/xamarintvos10/Xamarin.Essentials.xml",
@@ -1187,7 +1430,7 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.5.3.2.nupkg.sha512",
+        "xamarin.essentials.1.6.0.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
