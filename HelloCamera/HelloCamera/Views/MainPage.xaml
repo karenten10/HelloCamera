@@ -4,9 +4,10 @@
              x:Class="HelloCamera.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
         <Label Text="測試拍照" />
         <Button Text="拍照" Command="{Binding TakeCommand}"></Button>
+        <Image Source="{Binding MyImageSource}"></Image>
     </StackLayout>
 
 </ContentPage>
